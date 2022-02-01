@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashley Codes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://kit.fontawesome.com/41d45f82c3.js" crossorigin="anonymous"></script>
 
@@ -31,7 +34,7 @@
                 </ul>
             </nav>
         </div>
-            <div class="h1Container">
+            <div class="h1Container" id="home">
                 <h1>Ashley Thadickal<span>Frontend Developer</span></h1>
             </div>
         <button><i class="fas fa-chevron-down"></i></button>
@@ -39,7 +42,7 @@
 
     <main>
         <section class="wrapper">
-            <div class="aboutMeContainer" id="about">
+            <div class="aboutMeContainer jsScroll" id="about">
                 <div class="aboutMeImage">
                     <img src="" alt="">
                 </div>
@@ -55,7 +58,7 @@
         </section>
 
         <section class="wrapper">
-            <div class="projectContainer" id="projects">
+            <div class="projectContainer jsScroll slideRight" id="projects">
                 <div class="projectImage">
                     <img src="./assets/projectFour-ReactGroup.png" alt="RoboTrivia project homepage.">
                 </div>
@@ -84,7 +87,7 @@
                     <a href="https://github.com/Robo-Trivia/project4-robo-trivia">Git Repo</a>
                 </div>
             </div>
-            <div class="projectContainer">
+            <div class="projectContainer jsScroll slideLeft">
                 <div class="projectDescription">
                     <h3>A Look at Space - Photos from Nasa</h3>
                     <p>Have you ever wanted to see what it looks like in outerspace? Enter your favourite galatic word into the searchbar to take a look. This app accesses data from the NASA API and returns a list of images with their description.  Users are able to like/unlike photos. Site is responsive and accessible for all users.</p>
@@ -111,7 +114,7 @@
                 </div>
             </div>
             
-            <div class="projectContainer">
+            <div class="projectContainer jsScroll slideRight">
                 <div class="projectImage">
                     <img src="./assets/projectTwo-JavaScript.png" alt="Park weather app homepage.">
                 </div>
@@ -136,7 +139,7 @@
 
             </div>
 
-            <div class="projectContainer">
+            <div class="projectContainer jsScroll slideRight">
                 <div class="projectDescription">
                     <h3>Creative - A PSD Conversion</h3>
                     <p>Created a multi-page website based off client design.  Responsive across various screen sizes and accessible for all users.</p>
@@ -165,19 +168,21 @@
             </div>
         </section>
 
-        <section class="wrapper contactContainer" id="contact">
+        <section class="wrapper contactContainer jsScroll" id="contact">
             <div class="contactDetails">
                 <h4>Happy to Connect!</h4>
                 <p>Please send me a message here for a virtual coffee chat or to discuss our favourite pups! You can also send me an email at ashley@ashleycodes.dev to connect. Looking forward to chatting!</p>
                 
             </div>
             <form name="contact" method="POST" data-netlify="true" class="contactForm">
-                <label class="sr-only" for="contactName">Enter your name</label>
-                <input type="text" name="contactName" placeholder="Name">
+                <label class="sr-only" for="contactName">Enter your name.</label>
+                <input type="text" name="contactName" id="contactName" placeholder="Name">
 
-                <label>Another Email: <input type="email" name="email" /></label>
+                <label class="sr-only" for="contactEmail">Please provide your email.></label>
+                <input type="email" name="contactEmail" id="contactEmail" placeholder="Email">
 
-                <label>Message: <textarea name="message"></textarea></label>
+                <label class="sr-only" for="contactMessage">Please enter your message.</label>
+                <textarea name="contactMessage" id="contactMessage" cols="30" rows="10" placeholder="Please enter your message"></textarea>
 
                 <button type="submit">Send Message</button>
 
@@ -187,6 +192,7 @@
     </main>
 
     <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+        <script src="scripts.js"></script>
 </body>
 </html>
 
