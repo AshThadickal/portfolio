@@ -1,6 +1,7 @@
 @import './partials/setup';
 @import './partials/typographyAndGeneral';
 @import './partials/projects';
+@import './partials/aboutMe';
 
 
 
@@ -46,36 +47,23 @@ header {
             background-color: white;
             border-radius: 10px;
             padding: 30px 45px;
-            animation: flicker 1.5s infinite ease-in-out;
+            border: 2px solid $accent;
+            animation: glow 1.5s ease-out infinite alternate;
+            box-shadow: 0 0 10px rgba(188, 19, 254, .2), inset 0 0 10px rgba(188, 19, 254, .1), 0 5px 0 #fff;
         }
-            @keyframes flicker {
+            @keyframes glow {
+                0% {
+                    border-color: #a00498;
+                    box-shadow: 0 0 50px 25px rgba(160, 4, 152, 0.2), inset 0 0 25px 20px rgba(160, 4, 152, 0.1)
+                }
                 100% {
-                    box-shadow: 
-                        0 0 10px #fff,
-                        0 0 10px #fff,
-                        0 0 15px $accent,
-                        0 0 20px $accent,
-                        0 0 25px $accent,
-                        0 0 30px $accent,
-                        0 0 35px $accent,
-                        0 0 40px $accent,
-                        0 0 50px $accent
-                        inset 0 0 20px $accent; 
+                    border-color: #bc13fe;
+                    box-shadow: 0 0 50px 25px rgba(188, 19, 254, 0.6), inset 0 0 20px 20px rgba(188, 19, 254, 0.4); 
               }
-              0% {
-                  box-shadow: 
-                        0 0 5px #fff,
-                        0 0 5px #fff,
-                        0 0 10px $accent,
-                        0 0 15px $accent,
-                        0 0 20px $accent,
-                        0 0 25px $accent,
-                        inset 0 0 20px $accent;         
-                }   
-              }
+ 
         
     }
-
+}
 .navContainer {
     height: 10vh;
     width: 100%;
@@ -98,12 +86,26 @@ header {
                         text-transform: uppercase;
                             a {
                                 text-decoration: none;
+                                position: relative;
                                 color: black;
-                                transition: border-bottom .3s;
-                                &:hover,
-                                &:focus
+                                // transition: border-bottom .3s;
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    width: 100%;
+                                    transform: scaleX(0);
+                                    height: 2px;
+                                    bottom: 0;
+                                    left: 0;
+                                    background-color: $accent;
+                                    transform-origin: center;
+                                    transition: transform 0.25s ease-out;
+                                }
+                                &:hover::after,
+                                &:focus::after
                                  {
-                                    border-bottom: 2px solid #bc13fe;
+                                    transform: scaleX(1);
+                                    transform-origin: center;
                                 }
                             }
                     }

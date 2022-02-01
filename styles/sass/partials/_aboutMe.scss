@@ -1,0 +1,39 @@
+
+.aboutMeSection {
+    background-color: #ebecf0;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+        h2 {
+            padding: 20px 0;
+        }
+            .aboutMeContainer {
+                padding: 20px 0;
+                display: flex;
+            }
+                .aboutMeImage {
+                    width: 35%;
+                    margin-right: 50px;
+                }
+                .aboutMeParas {
+                    width: 65%;
+                    text-align: left;
+                    align-self: center;
+                    font-size: 1.2rem;
+                    letter-spacing: 0.2px;
+                }
+}
+
+
+// .aboutMeContainer {
+//     display: flex;
+//     justify-content: space-evenly;
+//     position: relative;
+//         .aboutMeImage {
+//             width: 25%;
+//         }
+//         img {
+//             display: block;
+//             max-width: 100%;
+//             height: auto;
+//         }
+// }

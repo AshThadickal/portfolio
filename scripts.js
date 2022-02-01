@@ -8,7 +8,7 @@ myPage.init = () => {
     // myPage.scrollEventListener();
 }
 
-// // need a handle click of the nav anchors to smooths scroll to the section
+// // need a handle click of the nav anchors to smooth scroll to the section
 
 myPage.handleNavigation = () => {
     const navLinks = document.querySelectorAll('.navContainer ul li a')
@@ -64,12 +64,6 @@ myPage.handleScrollAnimation = () => {
         }
     })
 }
-
-// myPage.scrollEventListener = () => {
-//     window.addEventListener('scroll', () => {
-//         myPage.handleScrollAnimation();
-//     })
-// }
 
 window.addEventListener('scroll', () => {
     myPage.handleScrollAnimation();

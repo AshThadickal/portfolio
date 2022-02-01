@@ -241,6 +241,12 @@ html {
   color: #000;
 }
 
+.wrapper {
+  width: 1200px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
 h1,
 h2,
 h3,
@@ -262,7 +268,7 @@ h1 span {
 h2,
 h3 {
   font-size: 1.5rem;
-  letter-spacing: 0.8rem;
+  letter-spacing: 0.5rem;
 }
 
 a {
@@ -310,6 +316,11 @@ img {
 .scrolled.slideRight {
   -webkit-animation: slide-in-right 1s ease-in-out both;
           animation: slide-in-right 1s ease-in-out both;
+}
+
+.scrolled.slideUp {
+  -webkit-animation: slideUp 1s ease-in-out both;
+          animation: slideUp 1s ease-in-out both;
 }
 
 @-webkit-keyframes slide-in-left {
@@ -361,16 +372,91 @@ img {
     opacity: 1;
   }
 }
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .projectContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
+.projectContainer .projectImage {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.projectContainer .projectDescription {
+  padding-left: 20px;
+}
+.projectContainer .projectDescription h3 {
+  text-align: center;
+}
+.projectContainer .projectDescription p {
+  font-size: 1.2rem;
+}
+.projectContainer .projectDescription h4 {
+  text-align: center;
+}
+.projectContainer .projectDescription ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
 
 .projectImage,
 .projectDescription {
   width: 50%;
+}
+
+.aboutMeSection {
+  background-color: #ebecf0;
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+}
+.aboutMeSection h2 {
+  padding: 20px 0;
+}
+.aboutMeSection .aboutMeContainer {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.aboutMeSection .aboutMeImage {
+  width: 35%;
+  margin-right: 50px;
+}
+.aboutMeSection .aboutMeParas {
+  width: 65%;
+  text-align: left;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 1.2rem;
+  letter-spacing: 0.2px;
 }
 
 header {
@@ -437,27 +523,34 @@ header button {
   background-color: white;
   border-radius: 10px;
   padding: 30px 45px;
-  -webkit-animation: flicker 1.5s infinite ease-in-out;
-          animation: flicker 1.5s infinite ease-in-out;
+  border: 2px solid #bc13fe;
+  -webkit-animation: glow 1.5s ease-out infinite alternate;
+          animation: glow 1.5s ease-out infinite alternate;
+  -webkit-box-shadow: 0 0 10px rgba(188, 19, 254, 0.2), inset 0 0 10px rgba(188, 19, 254, 0.1), 0 5px 0 #fff;
+          box-shadow: 0 0 10px rgba(188, 19, 254, 0.2), inset 0 0 10px rgba(188, 19, 254, 0.1), 0 5px 0 #fff;
 }
-@-webkit-keyframes flicker {
-  100% {
-    -webkit-box-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 15px #bc13fe, 0 0 20px #bc13fe, 0 0 25px #bc13fe, 0 0 30px #bc13fe, 0 0 35px #bc13fe, 0 0 40px #bc13fe, 0 0 50px #bc13fe inset 0 0 20px #bc13fe;
-            box-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 15px #bc13fe, 0 0 20px #bc13fe, 0 0 25px #bc13fe, 0 0 30px #bc13fe, 0 0 35px #bc13fe, 0 0 40px #bc13fe, 0 0 50px #bc13fe inset 0 0 20px #bc13fe;
-  }
+@-webkit-keyframes glow {
   0% {
-    -webkit-box-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 10px #bc13fe, 0 0 15px #bc13fe, 0 0 20px #bc13fe, 0 0 25px #bc13fe, inset 0 0 20px #bc13fe;
-            box-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 10px #bc13fe, 0 0 15px #bc13fe, 0 0 20px #bc13fe, 0 0 25px #bc13fe, inset 0 0 20px #bc13fe;
+    border-color: #a00498;
+    -webkit-box-shadow: 0 0 50px 25px rgba(160, 4, 152, 0.2), inset 0 0 25px 20px rgba(160, 4, 152, 0.1);
+            box-shadow: 0 0 50px 25px rgba(160, 4, 152, 0.2), inset 0 0 25px 20px rgba(160, 4, 152, 0.1);
+  }
+  100% {
+    border-color: #bc13fe;
+    -webkit-box-shadow: 0 0 50px 25px rgba(188, 19, 254, 0.6), inset 0 0 20px 20px rgba(188, 19, 254, 0.4);
+            box-shadow: 0 0 50px 25px rgba(188, 19, 254, 0.6), inset 0 0 20px 20px rgba(188, 19, 254, 0.4);
   }
 }
-@keyframes flicker {
-  100% {
-    -webkit-box-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 15px #bc13fe, 0 0 20px #bc13fe, 0 0 25px #bc13fe, 0 0 30px #bc13fe, 0 0 35px #bc13fe, 0 0 40px #bc13fe, 0 0 50px #bc13fe inset 0 0 20px #bc13fe;
-            box-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 15px #bc13fe, 0 0 20px #bc13fe, 0 0 25px #bc13fe, 0 0 30px #bc13fe, 0 0 35px #bc13fe, 0 0 40px #bc13fe, 0 0 50px #bc13fe inset 0 0 20px #bc13fe;
-  }
+@keyframes glow {
   0% {
-    -webkit-box-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 10px #bc13fe, 0 0 15px #bc13fe, 0 0 20px #bc13fe, 0 0 25px #bc13fe, inset 0 0 20px #bc13fe;
-            box-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 10px #bc13fe, 0 0 15px #bc13fe, 0 0 20px #bc13fe, 0 0 25px #bc13fe, inset 0 0 20px #bc13fe;
+    border-color: #a00498;
+    -webkit-box-shadow: 0 0 50px 25px rgba(160, 4, 152, 0.2), inset 0 0 25px 20px rgba(160, 4, 152, 0.1);
+            box-shadow: 0 0 50px 25px rgba(160, 4, 152, 0.2), inset 0 0 25px 20px rgba(160, 4, 152, 0.1);
+  }
+  100% {
+    border-color: #bc13fe;
+    -webkit-box-shadow: 0 0 50px 25px rgba(188, 19, 254, 0.6), inset 0 0 20px 20px rgba(188, 19, 254, 0.4);
+            box-shadow: 0 0 50px 25px rgba(188, 19, 254, 0.6), inset 0 0 20px 20px rgba(188, 19, 254, 0.4);
   }
 }
 
@@ -494,12 +587,31 @@ header button {
 }
 .navContainer ul li a {
   text-decoration: none;
+  position: relative;
   color: black;
-  -webkit-transition: border-bottom 0.3s;
-  transition: border-bottom 0.3s;
 }
-.navContainer ul li a:hover, .navContainer ul li a:focus {
-  border-bottom: 2px solid #bc13fe;
+.navContainer ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #bc13fe;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+.navContainer ul li a:hover::after, .navContainer ul li a:focus::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 .ashleyCodes::after {

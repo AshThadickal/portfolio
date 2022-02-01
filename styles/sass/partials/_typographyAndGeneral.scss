@@ -6,6 +6,12 @@ html {
     color: #000;
 }
 
+.wrapper {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
 h1, 
 h2, 
 h3,
@@ -27,7 +33,7 @@ h1 {
 h2,
 h3 {
     font-size: 1.5rem;
-    letter-spacing: 0.8rem;
+    letter-spacing: 0.5rem;
 }
 
 a {
@@ -74,6 +80,10 @@ img {
     animation: slide-in-right 1s ease-in-out both;
 }
 
+.scrolled.slideUp {
+    animation: slideUp 1s ease-in-out both;
+}
+
 @keyframes slide-in-left {
     0% {
         transform: translateX(-100px);
@@ -92,6 +102,17 @@ img {
     }
     100% {
         transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
         opacity: 1;
     }
 }
