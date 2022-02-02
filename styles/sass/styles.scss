@@ -2,6 +2,10 @@
 @import './partials/typographyAndGeneral';
 @import './partials/projects';
 @import './partials/aboutMe';
+@import './partials/techStack';
+@import './partials/nav';
+@import './partials/contactForm';
+@import './partials/footer';
 
 
 
@@ -64,53 +68,7 @@ header {
         
     }
 }
-.navContainer {
-    height: 10vh;
-    width: 100%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-        p {
-            width: 50%;
-        }
-        nav {
-            width: 100%;
-        }
-            ul {
-                width: 100%;
-                display: flex;
-                justify-content: space-evenly;
-                    li {
-                        list-style: none;
-                        font-size: 1.2rem;
-                        text-transform: uppercase;
-                            a {
-                                text-decoration: none;
-                                position: relative;
-                                color: black;
-                                // transition: border-bottom .3s;
-                                &::after {
-                                    content: '';
-                                    position: absolute;
-                                    width: 100%;
-                                    transform: scaleX(0);
-                                    height: 2px;
-                                    bottom: 0;
-                                    left: 0;
-                                    background-color: $accent;
-                                    transform-origin: center;
-                                    transition: transform 0.25s ease-out;
-                                }
-                                &:hover::after,
-                                &:focus::after
-                                 {
-                                    transform: scaleX(1);
-                                    transform-origin: center;
-                                }
-                            }
-                    }
-            }
-}
+
 
 .ashleyCodes {
                     &::after {

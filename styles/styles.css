@@ -237,7 +237,7 @@ html {
 
 html {
   font-size: 125%;
-  font-family: "Zilla Slab", serif;
+  font-family: "Questrial", sans-serif;
   color: #000;
 }
 
@@ -272,24 +272,38 @@ h3 {
 }
 
 a {
-  color: #000;
   text-decoration: none;
-  -webkit-transition: background 0.3s;
-  transition: background 0.3s;
+  position: relative;
+  color: black;
 }
-ahover, afocus {
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
   background-color: #bc13fe;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+a:hover::after, a:focus::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-input,
-textarea {
-  border: 1px solid #bc13fe;
 }
 
 img {
@@ -396,35 +410,106 @@ img {
     opacity: 1;
   }
 }
-.projectContainer {
+.projectContainerRight {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50vh;
   width: 100%;
 }
-.projectContainer .projectImage {
+.projectContainerRight .projectImage {
   -ms-flex-item-align: center;
       align-self: center;
 }
-.projectContainer .projectDescription {
+.projectContainerRight .projectImage img {
+  max-height: 450px;
+}
+.projectContainerRight .projectDescription {
   padding-left: 20px;
 }
-.projectContainer .projectDescription h3 {
+.projectContainerRight .projectDescription h3 {
   text-align: center;
 }
-.projectContainer .projectDescription p {
+.projectContainerRight .projectDescription p {
   font-size: 1.2rem;
 }
-.projectContainer .projectDescription h4 {
-  text-align: center;
+.projectContainerRight .projectDescription h4 {
+  text-align: right;
 }
-.projectContainer .projectDescription ul {
+.projectContainerRight .projectDescription ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+.projectContainerRight .projectDescription ul li {
+  margin-left: 10px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.projectContainerRight .projectDescription ul li:hover, .projectContainerRight .projectDescription ul li:focus {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #bc13fe;
+}
+.projectContainerRight .projectDescription ul a {
+  margin: 0 10px;
+}
+
+.projectContainerLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50vh;
+  width: 100%;
+}
+.projectContainerLeft .projectImage {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.projectContainerLeft .projectImage img {
+  max-height: 450px;
+}
+.projectContainerLeft .projectDescription {
+  padding-right: 20px;
+}
+.projectContainerLeft .projectDescription h3 {
+  text-align: center;
+}
+.projectContainerLeft .projectDescription p {
+  font-size: 1.2rem;
+}
+.projectContainerLeft .projectDescription h4 {
+  text-align: left;
+}
+.projectContainerLeft .projectDescription ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+.projectContainerLeft .projectDescription ul li {
+  margin-left: 10px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.projectContainerLeft .projectDescription ul li:hover, .projectContainerLeft .projectDescription ul li:focus {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #bc13fe;
+}
+.projectContainerLeft .projectDescription ul a {
+  margin: 0 10px;
 }
 
 .projectImage,
@@ -432,10 +517,14 @@ img {
   width: 50%;
 }
 
+.backgroundColour {
+  background-color: #ebecf0;
+}
+
 .aboutMeSection {
   background-color: #ebecf0;
-  margin-top: 20vh;
-  margin-bottom: 20vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
 }
 .aboutMeSection h2 {
   padding: 20px 0;
@@ -457,6 +546,99 @@ img {
       align-self: center;
   font-size: 1.2rem;
   letter-spacing: 0.2px;
+}
+
+.techStack {
+  height: 40vh;
+}
+.techStack h2 {
+  text-align: center;
+}
+.techStack ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.techStack ul li {
+  border: 2px solid #bc13fe;
+  border-radius: 25px;
+  margin: 10px 20px;
+  padding: 20px;
+}
+
+.navContainer {
+  height: 10vh;
+  width: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navContainer p {
+  width: 50%;
+}
+.navContainer nav {
+  width: 100%;
+}
+.navContainer ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.navContainer ul li {
+  list-style: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.contactContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 40px;
+  font-size: 1.2rem;
+}
+.contactContainer .contactDetails {
+  width: 40%;
+  margin-right: 20px;
+}
+.contactContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+}
+.contactContainer form input,
+.contactContainer form textarea,
+.contactContainer form button {
+  border: 1px solid #bc13fe;
+  margin: 5px 0;
+}
+.contactContainer form input {
+  padding: 5px 0;
+}
+.contactContainer form button {
+  padding: 10px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
 }
 
 header {
@@ -552,66 +734,6 @@ header button {
     -webkit-box-shadow: 0 0 50px 25px rgba(188, 19, 254, 0.6), inset 0 0 20px 20px rgba(188, 19, 254, 0.4);
             box-shadow: 0 0 50px 25px rgba(188, 19, 254, 0.6), inset 0 0 20px 20px rgba(188, 19, 254, 0.4);
   }
-}
-
-.navContainer {
-  height: 10vh;
-  width: 100%;
-  background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.navContainer p {
-  width: 50%;
-}
-.navContainer nav {
-  width: 100%;
-}
-.navContainer ul {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-.navContainer ul li {
-  list-style: none;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-.navContainer ul li a {
-  text-decoration: none;
-  position: relative;
-  color: black;
-}
-.navContainer ul li a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #bc13fe;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transition: -webkit-transform 0.25s ease-out;
-  transition: -webkit-transform 0.25s ease-out;
-  transition: transform 0.25s ease-out;
-  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
-}
-.navContainer ul li a:hover::after, .navContainer ul li a:focus::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: center;
-          transform-origin: center;
 }
 
 .ashleyCodes::after {

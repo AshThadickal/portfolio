@@ -1,8 +1,13 @@
-.projectContainer {
+.projectContainerRight {
     display: flex;
+    align-items: center;
+    height: 50vh;
     width: 100%;
         .projectImage {
             align-self: center;
+                img {
+                    max-height: 450px;
+                }
         }
         .projectDescription {
             padding-left: 20px;
@@ -13,11 +18,65 @@
                     font-size: 1.2rem;
                 }
                 h4 {
-                    text-align: center;
+                    text-align: right;
                 }
                 ul {
                     display: flex;
-                    justify-content: space-evenly;
+                    justify-content: end;
+                        li {
+                            margin-left: 10px;
+                            transition: all 0.2s ease-in-out;
+                                &:hover,
+                                &:focus {
+                                    transform: scale(1.2);
+                                    color: $accent;
+                                }
+                        }
+                        a {
+                            margin: 0 10px
+                        }
+                }
+        }
+}
+
+.projectContainerLeft {
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+        .projectImage {
+            align-self: center;
+                img {
+                    max-height: 450px;
+                }
+        }
+        .projectDescription {
+            padding-right: 20px;
+                h3 {
+                    text-align: center;
+                }
+                p {
+                    font-size: 1.2rem;
+                }
+                h4 {
+                    text-align: left;
+                }
+                ul {
+                    display: flex;
+                    justify-content: start;
+                    
+                        li {
+                            margin-left: 10px;
+                            transition: all 0.2s ease-in-out;
+                                &:hover,
+                                &:focus {
+                                    transform: scale(1.2);
+                                    color: $accent;
+                                }
+                        }
+                        a {
+                            margin: 0 10px
+                        }
                 }
         }
 }
@@ -25,4 +84,8 @@
 .projectImage,
 .projectDescription {
     width: 50%;
+}
+
+.backgroundColour {
+    background-color: #ebecf0;
 }
