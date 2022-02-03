@@ -1,8 +1,12 @@
 
 .aboutMeSection {
     background-color: #ebecf0;
+    height: 80vh;
     margin-top: 10vh;
     margin-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
         h2 {
             padding: 20px 0;
         }

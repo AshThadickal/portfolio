@@ -17,7 +17,29 @@
     <header>
         <div class="navContainer">
         <p class="ashleyCodes">Ashley Codes</p>
-            <nav>
+            <nav class="mainNav">
+                <ul>
+                    <li class="hrefLink">
+                        <a href="#home">home</a>
+                    </li>
+                    <li class="hrefLink">
+                        <a href="#about">about</a>
+                    </li>
+                    <li class="hrefLink">
+                        <a href="#projects">projects</a>
+                    </li>
+                    <li class="hrefLink">
+                        <a href="#contact">contact</a>
+                    </li>
+                    <li >
+                        <a href="./resume.html">resume</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="mobileNavContainer">
+            <span class="iconify mobileMenuIcon" data-icon="cil:hamburger-menu" data-width="50" data-height="50"></span>
+            <nav class="mobileNav">
                 <ul>
                     <li>
                         <a href="#home">home</a>
@@ -33,17 +55,18 @@
                     </li>
                 </ul>
             </nav>
+            </div>
         </div>
             <div class="h1Container" id="home">
                 <h1>Ashley Thadickal<span>Frontend Developer</span></h1>
             </div>
-        <button><i class="fas fa-chevron-down"></i></button>
+        <button class='arrowDown' href='#about'><i class="fas fa-chevron-down" ></i></button>
     </header>
 
     <main>
         <section class="aboutMeSection">
             <h2 class="wrapper">Hello, its me!</h2>
-            <div class="aboutMeContainer wrapper jsScroll slideUp" id="about">
+            <div class="aboutMeContainer wrapper" id="about">
                 <div class="aboutMeImage">
                     <img src="./assets/standInImage.jpg" alt="">
                 </div>
@@ -58,7 +81,7 @@
 
         </section>
 
-        <section class="wrapper techStack jsScroll slideUp">
+        <section class="wrapper techStack">
             <h2>Skills</h2>
             <ul class="my tech stack">
                 <li>
@@ -216,7 +239,7 @@
 
         <section class="backgroundColour" id="contact">
             <div class="wrapper contactContainer">
-            <div class="jsScroll contactDetails">
+            <div class="contactDetails">
                 <h4>Happy to Connect!</h4>
                 <p>Please send me a message for a virtual coffee chat or to discuss our favourite pups! You can also send me an email at ashleythadickal@gmail.com or schedule a time via my <a href="https://calendly.com/ashleythadickal" target="_blank">Calendly</a> link to connect. Looking forward to chatting!</p>
                 

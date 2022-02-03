@@ -1,8 +1,10 @@
 
 .contactContainer {
     display: flex;
+    align-items: center;
     padding-top: 40px;
     font-size: 1.2rem;
+    height: 60vh;
         .contactDetails {
             width: 40%;
             margin-right: 20px;
@@ -10,7 +12,7 @@
         form {
             display: flex;
             flex-direction: column;
-            width: 40%;
+            width: 60%;
                 input, 
                 textarea,
                 button {

@@ -271,6 +271,10 @@ h3 {
   letter-spacing: 0.5rem;
 }
 
+p {
+  line-height: 1.6;
+}
+
 a {
   text-decoration: none;
   position: relative;
@@ -417,7 +421,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 50vh;
+  height: 60vh;
   width: 100%;
 }
 .projectContainerRight .projectImage {
@@ -449,8 +453,10 @@ img {
 }
 .projectContainerRight .projectDescription ul li {
   margin-left: 10px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 .projectContainerRight .projectDescription ul li:hover, .projectContainerRight .projectDescription ul li:focus {
   -webkit-transform: scale(1.2);
@@ -468,7 +474,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 50vh;
+  height: 60vh;
   width: 100%;
 }
 .projectContainerLeft .projectImage {
@@ -488,20 +494,22 @@ img {
   font-size: 1.2rem;
 }
 .projectContainerLeft .projectDescription h4 {
-  text-align: left;
+  text-align: right;
 }
 .projectContainerLeft .projectDescription ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 .projectContainerLeft .projectDescription ul li {
   margin-left: 10px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 .projectContainerLeft .projectDescription ul li:hover, .projectContainerLeft .projectDescription ul li:focus {
   -webkit-transform: scale(1.2);
@@ -523,8 +531,19 @@ img {
 
 .aboutMeSection {
   background-color: #ebecf0;
+  height: 80vh;
   margin-top: 10vh;
   margin-bottom: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .aboutMeSection h2 {
   padding: 20px 0;
@@ -582,7 +601,7 @@ img {
 .navContainer p {
   width: 50%;
 }
-.navContainer nav {
+.navContainer .mainNav {
   width: 100%;
 }
 .navContainer ul {
@@ -600,12 +619,20 @@ img {
   text-transform: uppercase;
 }
 
+.mobileNavContainer {
+  display: none;
+}
+
 .contactContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 40px;
   font-size: 1.2rem;
+  height: 60vh;
 }
 .contactContainer .contactDetails {
   width: 40%;
@@ -619,7 +646,7 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 40%;
+  width: 60%;
 }
 .contactContainer form input,
 .contactContainer form textarea,
@@ -641,10 +668,25 @@ footer {
   text-align: center;
 }
 
+.resumeContainer {
+  height: 90vh;
+  background-color: #ebecf0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.resumeContainer img {
+  border: 2px solid #b8abcb;
+  margin: 0 auto;
+}
+
 header {
   height: 95vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6))), url(./../assets/jon-tyson-v_BgAXQ2hjw-unsplash.jpg);
-  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(./../assets/jon-tyson-v_BgAXQ2hjw-unsplash.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url(./../assets/jon-tyson-v_BgAXQ2hjw-unsplash.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(./../assets/jon-tyson-v_BgAXQ2hjw-unsplash.jpg);
   background-size: cover;
 }
 header button {
@@ -702,7 +744,7 @@ header button {
           align-items: center;
 }
 .h1Container h1 {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   padding: 30px 45px;
   border: 2px solid #bc13fe;
@@ -714,32 +756,38 @@ header button {
 @-webkit-keyframes glow {
   0% {
     border-color: #a00498;
-    -webkit-box-shadow: 0 0 50px 25px rgba(160, 4, 152, 0.2), inset 0 0 25px 20px rgba(160, 4, 152, 0.1);
-            box-shadow: 0 0 50px 25px rgba(160, 4, 152, 0.2), inset 0 0 25px 20px rgba(160, 4, 152, 0.1);
+    -webkit-box-shadow: 0 0 50px 25px rgba(160, 4, 152, 0.2), inset 0 0 20px 15px rgba(160, 4, 152, 0.1);
+            box-shadow: 0 0 50px 25px rgba(160, 4, 152, 0.2), inset 0 0 20px 15px rgba(160, 4, 152, 0.1);
   }
   100% {
     border-color: #bc13fe;
-    -webkit-box-shadow: 0 0 50px 25px rgba(188, 19, 254, 0.6), inset 0 0 20px 20px rgba(188, 19, 254, 0.4);
-            box-shadow: 0 0 50px 25px rgba(188, 19, 254, 0.6), inset 0 0 20px 20px rgba(188, 19, 254, 0.4);
+    -webkit-box-shadow: 0 0 50px 25px rgba(188, 19, 254, 0.6), inset 0 0 15px 10px rgba(188, 19, 254, 0.4);
+            box-shadow: 0 0 50px 25px rgba(188, 19, 254, 0.6), inset 0 0 15px 10px rgba(188, 19, 254, 0.4);
   }
 }
 @keyframes glow {
   0% {
     border-color: #a00498;
-    -webkit-box-shadow: 0 0 50px 25px rgba(160, 4, 152, 0.2), inset 0 0 25px 20px rgba(160, 4, 152, 0.1);
-            box-shadow: 0 0 50px 25px rgba(160, 4, 152, 0.2), inset 0 0 25px 20px rgba(160, 4, 152, 0.1);
+    -webkit-box-shadow: 0 0 50px 25px rgba(160, 4, 152, 0.2), inset 0 0 20px 15px rgba(160, 4, 152, 0.1);
+            box-shadow: 0 0 50px 25px rgba(160, 4, 152, 0.2), inset 0 0 20px 15px rgba(160, 4, 152, 0.1);
   }
   100% {
     border-color: #bc13fe;
-    -webkit-box-shadow: 0 0 50px 25px rgba(188, 19, 254, 0.6), inset 0 0 20px 20px rgba(188, 19, 254, 0.4);
-            box-shadow: 0 0 50px 25px rgba(188, 19, 254, 0.6), inset 0 0 20px 20px rgba(188, 19, 254, 0.4);
+    -webkit-box-shadow: 0 0 50px 25px rgba(188, 19, 254, 0.6), inset 0 0 15px 10px rgba(188, 19, 254, 0.4);
+            box-shadow: 0 0 50px 25px rgba(188, 19, 254, 0.6), inset 0 0 15px 10px rgba(188, 19, 254, 0.4);
   }
 }
 
+.ashleyCodes {
+  position: relative;
+  margin-left: 10%;
+}
 .ashleyCodes::after {
   content: "";
-  width: 50px;
-  height: 3px;
-  background: #bc13fe;
-  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  width: 25%;
+  height: 25%;
+  background-color: #bc13fe;
 }

@@ -6,19 +6,28 @@ myPage.init = () => {
     // myPage.fadeOut();
     // myPage.handleScrollAnimation();
     // myPage.scrollEventListener();
+    myPage.handleScroll();
+    myPage.arrowDownClick();
 }
 
 // // need a handle click of the nav anchors to smooth scroll to the section
 
 myPage.handleNavigation = () => {
-    const navLinks = document.querySelectorAll('.navContainer ul li a')
-    for (let navLink of navLinks) {
+    const navLinks = document.querySelectorAll('.hrefLink a')
+    for (const navLink of navLinks) {
+        console.log(navLink)
         navLink.addEventListener('click', myPage.handleNavScroll);
     }
 }
 
-myPage.handleNavScroll = function handleNavClick(e) {
+myPage.arrowDownClick = function (e) {
+    const arrowDown = document.querySelector('.arrowDown')
+    arrowDown.addEventListener('click', myPage.handleNavScroll)
+}
+
+myPage.handleNavScroll = function (e) {
     e.preventDefault();
+    console.log(this.getAttribute('href'))
     const href = this.getAttribute('href');
     const offsetTop = document.querySelector(href).offsetTop;
     
@@ -31,47 +40,43 @@ myPage.handleNavScroll = function handleNavClick(e) {
 
 // need scroll functions such that elements become visible on scolling the page
 
+// managing the amount of time the scroll is checked
+myPage.debounce = function (func, wait = 10, immediate = true) {
+    let timeout;
+    return function() {
+        let context = this, args = arguments;
+        let later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context.args);
+    };
+    let callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if(callNow) func.apply(context, args);
+    };
+};
+
 myPage.scrollElements = document.querySelectorAll('.jsScroll');
 
-myPage.elementInView = (el, dividend = 1) => {
-    const elementTop = el.getBoundingClientRect().top;
-
-    return elementTop <= (window.innerHeight || document.documentElement.clientHeight / dividend);
-};
-
-myPage.elementOutOfView = (el) => {
-    const elementTop = el.getBoundingClientRect().top;
-
-    return (
-        elementTop > (window.innerHeight || document.documentElement.clientHeight)
-    );
-};
-
-myPage.displayScrollElement = (element) => {
-    element.classList.add('scrolled');
-};
-
-myPage.hideScrollElement = (element) => {
-    element.classList.remove('scrolled');
-};
-
-myPage.handleScrollAnimation = () => {
-    myPage.scrollElements.forEach((el) => {
-        if(myPage.elementInView(el, 1.25)) {
-            myPage.displayScrollElement(el);
-        } else if (myPage.elementOutOfView(el)) {
-            myPage.hideScrollElement(el);
+myPage.checkSlide = function(e) {
+    myPage.scrollElements.forEach(scrollElement => {
+        // halfway through the element
+        const slideInAt = (window.scrollY + window.innerHeight) - scrollElement.clientHeight / 2;
+        // bottom of element
+        const elementBottom = scrollElement.offsetTop + scrollElement.clientHeight;
+        const isHalfShown = slideInAt > scrollElement.offsetTop;
+        const isNotScrolledPast = window.scrollY < elementBottom
+        if(isHalfShown && isNotScrolledPast) {
+            scrollElement.classList.add('scrolled');
+        } else {
+            scrollElement.classList.remove('scrolled');
         }
     })
 }
 
-window.addEventListener('scroll', () => {
-    myPage.handleScrollAnimation();
-})
-
-
-
-
+myPage.handleScroll = function() {
+    window.addEventListener('scroll', myPage.debounce(myPage.checkSlide))
+}
 // need a handle click of a hamburger menu on mobile to open a menu and to close (display block/none?)
 
 

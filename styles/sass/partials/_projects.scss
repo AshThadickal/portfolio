@@ -1,7 +1,7 @@
 .projectContainerRight {
     display: flex;
     align-items: center;
-    height: 50vh;
+    height: 60vh;
     width: 100%;
         .projectImage {
             align-self: center;
@@ -25,7 +25,7 @@
                     justify-content: end;
                         li {
                             margin-left: 10px;
-                            transition: all 0.2s ease-in-out;
+                            transition: transform 0.2s ease-in-out;
                                 &:hover,
                                 &:focus {
                                     transform: scale(1.2);
@@ -42,7 +42,7 @@
 .projectContainerLeft {
     display: flex;
     align-items: center;
-    height: 50vh;
+    height: 60vh;
     width: 100%;
         .projectImage {
             align-self: center;
@@ -59,15 +59,15 @@
                     font-size: 1.2rem;
                 }
                 h4 {
-                    text-align: left;
+                    text-align: right;
                 }
                 ul {
                     display: flex;
-                    justify-content: start;
+                    justify-content: end;
                     
                         li {
                             margin-left: 10px;
-                            transition: all 0.2s ease-in-out;
+                            transition: transform 0.2s ease-in-out;
                                 &:hover,
                                 &:focus {
                                     transform: scale(1.2);
