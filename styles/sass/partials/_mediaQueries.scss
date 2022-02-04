@@ -2,8 +2,55 @@
 //  //target things with animations and transitions to turn them off here
 // }
 
-@media (min-width: 350px) {
-    .navContainer {
+ @media (max-width: 780px) {
+     .aboutMeSection {
+        .aboutMeContainer {
+            display: block;
+                .aboutMeImage {
+                    width: 75%;
+                }
+                .aboutMeParas {
+                    width: 100%;
+                    text-align: right;
+                }
+        }
+    }
+    .projects {
+        .backgroundColour {
+            padding-top: 10px;
+        }
+        .projectContainer {
+            padding: 50px 0;
+        }
+            .projectContainer
+            .projectContainerRight {
+                flex-direction: column;
+                padding-bottom: 20px;
+            }
+            .projectContainerLeft {
+                flex-direction: column-reverse;
+                    .projectImage {
+                        display: flex;
+                        justify-content: center;
+                    }
+                    img {
+                        max-height: 300px;
+                    }
+            }
+        
+            .projectImage,
+            .projectDescription {
+                width: 100%;
+                    p {
+                        font-size: 0.9rem;
+                    }
+            }
+    }
+ }
+
+@media (max-width: 480px) {
+.navContainer,
+    .techStack .myTechStack {
         display: none;
     }
     header {
@@ -11,12 +58,53 @@
             .h1Container {
 
                     h1 {
-                        font-size: 1rem;
+                        font-size: 1.5rem;
                         line-height: 40px;
                     }
             }
             .arrowDown {
                 display: none;
             }
+            .mobileMenuButton {
+                display: block;
+            }
+    }
+
+    h2,
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .mobileTechStack {
+            display: flex;
+    flex-wrap: wrap;
+    }
+
+    
+
+    .contactContainer {
+        flex-direction: column;
+            .contactDetails {
+                width: 100%;
+                margin: 0;
+            }
+            .contactForm {
+                width: 100%;
+            }
+    }
+}
+
+@media (max-width: 350px) {
+    header {
+
+        .h1Container {
+            h1 {
+            font-size: 1rem;
+        }
+    }
     }
 }

@@ -269,6 +269,7 @@ h2,
 h3 {
   font-size: 1.5rem;
   letter-spacing: 0.5rem;
+  text-align: center;
 }
 
 p {
@@ -421,7 +422,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 60vh;
   width: 100%;
 }
 .projectContainerRight .projectImage {
@@ -471,7 +471,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 60vh;
   width: 100%;
 }
 .projectContainerLeft .projectImage {
@@ -522,17 +521,9 @@ img {
   background-color: #ebecf0;
 }
 
-.projectOne .projectDescription {
-  width: 65%;
-}
-.projectOne .projectImage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 35%;
+.projectContainer {
+  padding: 20px 0 30px 0;
+  min-height: 60vh;
 }
 
 .aboutMeSection {
@@ -614,6 +605,37 @@ img {
 }
 .techStack .myTechStack li p {
   margin: 0;
+}
+
+.mobileTechStack {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.mobileTechStack li {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #bc13fe;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px 10px;
+}
+.mobileTechStack li p {
+  font-size: 0.8rem;
+  line-height: 0;
 }
 
 .navContainer {
@@ -742,6 +764,7 @@ img {
 }
 
 .mobileMenuButton {
+  display: none;
   color: #bc13fe;
   position: absolute;
   top: 15px;
@@ -774,9 +797,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-top: 40px;
   font-size: 1.2rem;
   min-height: 60vh;
@@ -784,6 +804,9 @@ img {
 .contactContainer .contactDetails {
   width: 40%;
   margin-right: 20px;
+}
+.contactContainer .contactDetails h4 {
+  margin-top: 0;
 }
 .contactContainer form {
   display: -webkit-box;
@@ -818,8 +841,60 @@ footer {
   text-align: center;
 }
 
-@media (min-width: 350px) {
-  .navContainer {
+@media (max-width: 780px) {
+  .aboutMeSection .aboutMeContainer {
+    display: block;
+  }
+  .aboutMeSection .aboutMeContainer .aboutMeImage {
+    width: 75%;
+  }
+  .aboutMeSection .aboutMeContainer .aboutMeParas {
+    width: 100%;
+    text-align: right;
+  }
+
+  .projects .backgroundColour {
+    padding-top: 10px;
+  }
+  .projects .projectContainer {
+    padding: 50px 0;
+  }
+  .projects .projectContainer .projectContainerRight {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 20px;
+  }
+  .projects .projectContainerLeft {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .projects .projectContainerLeft .projectImage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .projects .projectContainerLeft img {
+    max-height: 300px;
+  }
+  .projects .projectImage,
+.projects .projectDescription {
+    width: 100%;
+  }
+  .projects .projectImage p,
+.projects .projectDescription p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  .navContainer,
+.techStack .myTechStack {
     display: none;
   }
 
@@ -827,11 +902,50 @@ footer {
     height: 60vh;
   }
   header .h1Container h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 40px;
   }
   header .arrowDown {
     display: none;
+  }
+  header .mobileMenuButton {
+    display: block;
+  }
+
+  h2,
+h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .mobileTechStack {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .contactContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactContainer .contactDetails {
+    width: 100%;
+    margin: 0;
+  }
+  .contactContainer .contactForm {
+    width: 100%;
+  }
+}
+@media (max-width: 350px) {
+  header .h1Container h1 {
+    font-size: 1rem;
   }
 }
 header {

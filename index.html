@@ -10,13 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://kit.fontawesome.com/41d45f82c3.js" crossorigin="anonymous"></script>
-
-
 </head>
+
 <body>
+    
     <header>
         <div class="navContainer">
-        <!-- <p class="ashleyCodes">Ashley Codes</p> -->
             <nav class="mainNav">
                 <ul>
                     <li class="hrefLink">
@@ -33,30 +32,35 @@
                     </li>
                 </ul>
             </nav>
+        </div>
+        <!-- End of Nav Container -->
 
-        </div>
         <div class="mobileNavContainer">
-        <button class="mobileMenuButton"><span class="iconify mobileMenuIcon" data-icon="cil:hamburger-menu" data-width="50" data-height="50"></span></button>
-        <nav class="mobileNav">
-            <ul>
-                <li>
-                    <a href="#home">home</a>
-                </li>
-                <li>
-                    <a href="#about">about</a>
-                </li>
-                <li>
-                    <a href="#projects">projects</a>
-                </li>
-                <li>
-                    <a href="#contact">contact</a>
-                </li>
-            </ul>
-        </nav>
+            <button class="mobileMenuButton"><span class="iconify mobileMenuIcon" data-icon="cil:hamburger-menu" data-width="50" data-height="50"></span></button>
+            <nav class="mobileNav">
+                <ul>
+                    <li>
+                        <a href="#home">home</a>
+                    </li>
+                    <li>
+                        <a href="#about">about</a>
+                    </li>
+                    <li>
+                        <a href="#projects">projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">contact</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-            <div class="h1Container" id="home">
-                <h1>Ashley Thadickal<span>Frontend Developer</span></h1>
-            </div>
+        <!-- End of mobile nav -->
+
+        <div class="h1Container" id="home">
+            <h1>Ashley Thadickal<span>Frontend Developer</span></h1>
+        </div>
+
+        <!-- button to move to About Me section -->
         <button class='arrowDown' href='#about'><i class="fas fa-chevron-down" ></i></button>
     </header>
 
@@ -68,14 +72,17 @@
                     <img src="./assets/Ashley - Web-26.jpg" alt="Its me, Ashley.">
                 </div>
                 <div class="aboutMeParas">
-                    <p>Hello! I'm Ashley, a Front-End Web Developer and recent graduate of <a href="https://www.junocollege.com">Juno College of Technology</a>.  I have a passion for continuous learning and am looking forward to collaborating with a knowledgable team and applying my experience in HTML5, CSS3, JavaScript fundamentals, React and other front-end technologies.  
+                    <p>Hello! I'm Ashley, a Front-End Web Developer and recent graduate of Juno College of Technology.  I have a passion for continuous learning and am looking forward to collaborating with a knowledgable team and applying my experience in HTML5, CSS3, JavaScript fundamentals, React and other front-end technologies.  
 
                     <p>Prior to starting a career in tech, I worked in the legal field as a law clerk. My experiences to date have sharpened my ability to apply analytical thinking to solve problems while working in a fast-paced environment. </p>
 
-                    <p>When I am not coding, you can find me exploring the outdoors with my family and learning ways to incorporate meditation into my daily life.  Please feel free to reach out to me with any suggestions you may have!</p>
+                    <p>Currently, I am furthering my React knowledge and finding ways to incorporate meditation into my daily routine.</p>
+
+                    <p>When I am not coding, you can find me exploring the outdoors with my family or working on puzzels together.</p>
+
+                    <!-- <p>Please <a href="" download="./assets/AshleyThadickalResume.pdf">click here to download</a>a copy of my resume.</p> -->
                 </div>
             </div>
-
         </section>
 
         <section class="wrapper techStack">
@@ -126,16 +133,66 @@
                     <p>Responsive</p>
                 </li>
             </ul>
+
+            <ul class="mobileTechStack">
+                <li>
+                    <span class="iconify" data-icon="ant-design:html5-filled" data-width="30" data-height="30"></span>
+                    <p>HTML5</p>
+                </li>
+                <li>
+                    <span class="iconify" data-icon="bx:bxl-css3" data-width="30" data-height="30"></span>
+                    <p>CSS3</p>
+                </li>
+                <li>
+                    <span class="iconify" data-icon="akar-icons:sass-fill" data-width="30" data-height="30"></span>
+                    <p>SASS</p>
+                </li>
+                <li>
+                    <span class="iconify" data-icon="akar-icons:javascript-fill" data-width="30" data-height="30"></span>
+                    <p>JavaScript</p>
+                </li>
+                <li>
+                    <span class="iconify" data-icon="akar-icons:react-fill" data-width="30" data-height="30"></span>
+                    <p>React</p>
+                </li>
+                <li>
+                    <span class="iconify" data-icon="eos-icons:api-outlined" data-width="30" data-height="30"></span>
+                    <p>Restful APIs</p>
+                </li>
+                <li>
+                    <span class="iconify" data-icon="cib:firebase" data-width="30" data-height="30"></span>
+                    <p>Firebase</p>
+                </li>
+                <li>
+                    <span class="iconify" data-icon="simple-icons:iterm2" data-width="30" data-height="30"></span>
+                    <p>iTerm</p>
+                </li>
+                <li>
+                    <span class="iconify" data-icon="fa-brands:git-square" data-width="30" data-height="30"></span>
+                    <p>Git</p>
+                </li>
+                <li>
+                    <span class="iconify" data-icon="carbon:accessibility-alt" data-width="30" data-height="30"></span>
+                    <p>Accessibility</p>
+                </li>
+                <li>
+                    <span class="iconify" data-icon="mdi:responsive" data-width="30" data-height="30"></span>
+                    <p>Responsive</p>
+                </li>
+            </ul>
         </section>
 
-        <section>
-            <div class="backgroundColour">
-            <div class="projectContainerRight wrapper jsScroll slideRight" id="projects">
+        <section class="projects" id="projects">
+            <h2>Selected Projects</h2>
+            <div class="projectContainer backgroundColour">
+                <h3>RoboTrivia</h3>
+            <div class="projectContainerRight wrapper jsScroll slideRight">
+                
                 <div class="projectImage">
                     <img src="./assets/proectFour.png" alt="RoboTrivia project homepage.">
                 </div>
                 <div class="projectDescription">
-                    <h3>RoboTrivia</h3>
+                    
                     <p>A trivia quiz app that utilized a trivia API to display questions of ten to the user.  Scores can be subbmitted to firebase and at the end of the quiz, the top three players are displayed. Try your luck and see if you beat the top scores! Site is responsive and accessible to all users.</p>
                     <a href="https://robotrivia.netlify.app/" target="_blank">Live Site</a><span> |</span>
                     <a href="https://github.com/Robo-Trivia/project4-robo-trivia" target="_blank">Git Repo</a>
@@ -161,9 +218,10 @@
             </div>
             </div>
 
+            <div class="projectContainer">
+                <h3>A Look at Space - Photos from Nasa</h3>
             <div class="projectContainerLeft wrapper jsScroll slideLeft">
                 <div class="projectDescription">
-                    <h3>A Look at Space - Photos from Nasa</h3>
                     <p>Have you ever wanted to see what it looks like in outerspace? Enter your favourite galatic word into the searchbar to take a look. This app accesses data from the NASA API and returns a list of images with their description.  Users are able to like/unlike photos. Site is responsive and accessible for all users.</p>
                     <a href="https://look-into-space.netlify.app/" target="_blank">Live Site</a><span> |</span>
                     <a href="https://github.com/AshThadickal/ashleyThadickalProjectThree" target="_blank">Git Repo</a>
@@ -188,14 +246,16 @@
                     <img src="./assets/projectThree.png" alt="NASA project homepage.">
                 </div>
             </div>
+            </div>
             
-            <div class="backgroundColour">
+
+            <div class="projectContainer backgroundColour">
+                <h3>Park Weather App</h3>
             <div class="projectContainerRight wrapper jsScroll slideRight">
                 <div class="projectImage">
                     <img src="./assets/projectTwo.png" alt="Park weather app homepage.">
                 </div>
                 <div class="projectDescription">
-                    <h3>Park Weather App</h3>
                     <p>Use this app to get real time weather to determine whether it is a great day to head to the park! This app makes a fetch call to the open weather map API based off user input and returns the up-to-date weather along with a dynamic image to match whether it is sunny, cloudy, snowy, or rainy.</p>
                     <a href="https://vigorous-thompson-3ab435.netlify.app/" target="_blank">Live Site</a><span> |</span>
                     <a href="https://github.com/Ka-hley/parkWeatherApp" target="_blank">Git Repo</a>
@@ -217,9 +277,10 @@
             </div>
             </div>
 
+            <div class="projectContainer">
+                <h3>Creative - A PSD Conversion</h3>
             <div class="projectContainerLeft projectOne wrapper jsScroll slideLeft">
                 <div class="projectDescription">
-                    <h3>Creative - A PSD Conversion</h3>
                     <p>Created a multi-page website based off client design.  Responsive across various screen sizes and accessible for all users.</p>
                     <a href="https://creative-psd.netlify.app/" target="_blank">Live Site</a><span> |</span>
                     <a href="https://github.com/AshThadickal/ashleyThadickalProjectOne" target="_blank">Git Repo</a>
@@ -244,6 +305,7 @@
                     <img src="./assets/shotsnapp-1643919251.348.png" alt="Client PSD conversion homepage.">
                 </div>
 
+            </div>
             </div>
         </section>
 

@@ -1,13 +1,15 @@
 
 .contactContainer {
     display: flex;
-    align-items: center;
     padding-top: 40px;
     font-size: 1.2rem;
     min-height: 60vh;
         .contactDetails {
             width: 40%;
             margin-right: 20px;
+                h4 {
+                    margin-top: 0;
+                }
         }
         form {
             display: flex;
