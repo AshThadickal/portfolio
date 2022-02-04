@@ -1,8 +1,9 @@
+@import './functions';
 
 .aboutMeSection {
-    background-color: #ebecf0;
+    background-color: $background;
     min-height: 80vh;
-    margin-top: 10vh;
+    padding-top: 10vh;
     margin-bottom: 10vh;
     display: flex;
     flex-direction: column;
@@ -28,20 +29,8 @@
                     align-self: center;
                     font-size: 1.2rem;
                     letter-spacing: 0.2px;
+                        a {
+                            color: $accent;
+                        }
                 }
 }
-
-
-// .aboutMeContainer {
-//     display: flex;
-//     justify-content: space-evenly;
-//     position: relative;
-//         .aboutMeImage {
-//             width: 25%;
-//         }
-//         img {
-//             display: block;
-//             max-width: 100%;
-//             height: auto;
-//         }
-// }

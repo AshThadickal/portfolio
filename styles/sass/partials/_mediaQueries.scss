@@ -1,9 +1,14 @@
-// @media (prefers-reduced-motion: reduce) {
-//  //target things with animations and transitions to turn them off here
-// }
+@media (prefers-reduced-motion: reduce) {
+ .arrowDown {
+     animation-name: bounce;
+ }
+ .h1Container h1 {
+     animation-name: glow;
+ }
+}
 
  @media (max-width: 780px) {
-     .aboutMeSection {
+    .aboutMeSection {
         .aboutMeContainer {
             display: block;
                 .aboutMeImage {
@@ -15,17 +20,21 @@
                 }
         }
     }
-    .projects {
-        .backgroundColour {
-            padding-top: 10px;
+    .projectContainer {
+        padding: 50px 0;
+        flex-direction: column;
+        h3 {
+            font-size: 1.3rem;
         }
-        .projectContainer {
-            padding: 50px 0;
-        }
-            .projectContainer
             .projectContainerRight {
                 flex-direction: column;
-                padding-bottom: 20px;
+                    .projectImage,
+                    .projectDescription {
+                        width: 100%;
+                            p {
+                                font-size: 0.9rem;
+                            }
+                    }
             }
             .projectContainerLeft {
                 flex-direction: column-reverse;
@@ -33,40 +42,64 @@
                         display: flex;
                         justify-content: center;
                     }
-                    img {
-                        max-height: 300px;
-                    }
-            }
-        
-            .projectImage,
-            .projectDescription {
-                width: 100%;
-                    p {
-                        font-size: 0.9rem;
+                        img {
+                            max-height: 300px;
+                        }
+                    .projectDescription {
+                        width: 100%;
+                            p {
+                                font-size: 0.9rem;
+                            }
                     }
             }
     }
+    
+    .projectImage,
+    .projectDescription {
+        width: 100%;
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    .contactDetails {
+        p {
+            font-size: 0.9rem;
+        }
+    }
+    }
+
+ @media (max-width: 700px){
+     .mainNav {
+         display: none;
+     }
+    .mobileMenuButton {
+        display: block;
+    }
+     .h1Container {
+         h1 {
+             font-size: 1.8rem;
+             line-height: 50px;
+             padding: 30px;
+         }
+     }
+
  }
 
 @media (max-width: 480px) {
-.navContainer,
     .techStack .myTechStack {
         display: none;
     }
     header {
-        height: 60vh;
+        height: 90vh;
             .h1Container {
 
                     h1 {
-                        font-size: 1.5rem;
+                        font-size: 1rem;
                         line-height: 40px;
                     }
             }
             .arrowDown {
                 display: none;
-            }
-            .mobileMenuButton {
-                display: block;
             }
     }
 
@@ -80,12 +113,9 @@
     }
 
     .mobileTechStack {
-            display: flex;
-    flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
     }
-
-    
-
     .contactContainer {
         flex-direction: column;
             .contactDetails {

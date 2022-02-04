@@ -11,6 +11,19 @@
                     margin-top: 0;
                 }
         }
+        .contactIconsContainer {
+            a {
+                transition: color 0.25s ease-out;
+                    &:hover,
+                    &:focus {
+                        color: $accent;
+                    }
+                &::after {
+                    width: 0;
+                    height: 0;
+                }
+            }
+        }
         form {
             display: flex;
             flex-direction: column;
@@ -28,7 +41,6 @@
                     resize: none;
                 }
                 button {
-                    // width: 25%;
                     padding: 10px;
                     align-self: flex-start;
                     cursor: pointer;

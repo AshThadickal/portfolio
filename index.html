@@ -15,25 +15,23 @@
 <body>
     
     <header>
-        <div class="navContainer">
-            <nav class="mainNav">
-                <ul>
-                    <li class="hrefLink">
-                        <a href="#home">home</a>
-                    </li>
-                    <li class="hrefLink">
-                        <a href="#about">about</a>
-                    </li>
-                    <li class="hrefLink">
-                        <a href="#projects">projects</a>
-                    </li>
-                    <li class="hrefLink">
-                        <a href="#contact">contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <!-- End of Nav Container -->
+        <nav class="mainNav">
+            <ul>
+                <li class="hrefLink">
+                    <a href="#home">home</a>
+                </li>
+                <li class="hrefLink">
+                    <a href="#about">about</a>
+                </li>
+                <li class="hrefLink">
+                    <a href="#projects">projects</a>
+                </li>
+                <li class="hrefLink">
+                    <a href="#contact">contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- End of Main Nav -->
 
         <div class="mobileNavContainer">
             <button class="mobileMenuButton"><span class="iconify mobileMenuIcon" data-icon="cil:hamburger-menu" data-width="50" data-height="50"></span></button>
@@ -65,9 +63,9 @@
     </header>
 
     <main>
-        <section class="aboutMeSection">
+        <section class="aboutMeSection" id="about">
             <h2 class="wrapper">Hello, its me!</h2>
-            <div class="aboutMeContainer wrapper" id="about">
+            <div class="aboutMeContainer wrapper">
                 <div class="aboutMeImage">
                     <img src="./assets/Ashley - Web-26.jpg" alt="Its me, Ashley.">
                 </div>
@@ -80,13 +78,14 @@
 
                     <p>When I am not coding, you can find me exploring the outdoors with my family or working on puzzels together.</p>
 
-                    <!-- <p>Please <a href="" download="./assets/AshleyThadickalResume.pdf">click here to download</a>a copy of my resume.</p> -->
+                    <a href="./assets/AshleyThadickalResume.pdf" target="_blank">Click here to take a peak at my resume.</a>
                 </div>
             </div>
         </section>
+        <!-- End of About Me section -->
 
         <section class="wrapper techStack">
-            <h2>Skills</h2>
+            <h2>Proficient in the Following:</h2>
             <ul class="myTechStack">
                 <li>
                     <span class="iconify" data-icon="ant-design:html5-filled" data-width="80" data-height="80"></span>
@@ -133,7 +132,9 @@
                     <p>Responsive</p>
                 </li>
             </ul>
+            <!-- End of Main List of Skills -->
 
+            <!-- Required another List as the icons do not resize within css - will be looking for an alternative -->
             <ul class="mobileTechStack">
                 <li>
                     <span class="iconify" data-icon="ant-design:html5-filled" data-width="30" data-height="30"></span>
@@ -180,141 +181,155 @@
                     <p>Responsive</p>
                 </li>
             </ul>
+            <!-- End of mobile skill list -->
         </section>
+        <!-- End of skill section -->
 
-        <section class="projects" id="projects">
-            <h2>Selected Projects</h2>
-            <div class="projectContainer backgroundColour">
-                <h3>RoboTrivia</h3>
-            <div class="projectContainerRight wrapper jsScroll slideRight">
-                
-                <div class="projectImage">
-                    <img src="./assets/proectFour.png" alt="RoboTrivia project homepage.">
-                </div>
-                <div class="projectDescription">
-                    
-                    <p>A trivia quiz app that utilized a trivia API to display questions of ten to the user.  Scores can be subbmitted to firebase and at the end of the quiz, the top three players are displayed. Try your luck and see if you beat the top scores! Site is responsive and accessible to all users.</p>
-                    <a href="https://robotrivia.netlify.app/" target="_blank">Live Site</a><span> |</span>
-                    <a href="https://github.com/Robo-Trivia/project4-robo-trivia" target="_blank">Git Repo</a>
-                    <h4>made with</h4>
-                    <ul>
-                        <li>
-                            <span class="iconify" data-icon="ant-design:html5-filled" data-width="30" data-height="30"></span>
-                        </li>
-                        <li>
-                            <span class="iconify" data-icon="akar-icons:sass-fill" data-width="30" data-height="30"></span>
-                        </li>
-                        <li>
-                            <span class="iconify" data-icon="akar-icons:react-fill" data-width="30" data-height="30"></span>
-                        </li>
-                        <li>
-                            <span class="iconify" data-icon="eos-icons:api" data-width="30" data-height="30"></span>
-                        </li>
-                        <li>
-                            <span class="iconify" data-icon="simple-icons:firebase" data-width="30" data-height="30"></span>
-                        </li>
-                    </ul>
-                </div>
+        <section id="projects">
+            <div class="fullbleedGrey projectsHeader">
+                <h2 class="wrapper">Current Projects</h2>
+                <p class="wrapper">Please check back for future projects as I continue to learn and grow.</p>
             </div>
+            <!-- End of Title of  -->
+            <div class="projectContainer fullbleedGrey">
+                <div class="projectContainerRight wrapper jsScroll slideRight"> 
+                    <div class="projectImage">
+                        <img src="./assets/proectFour.png" alt="RoboTrivia project homepage.">
+                    </div>
+                    <div class="projectDescription">
+                        <h3>RoboTrivia</h3>
+                        <p>A quiz app that utilized a trivia API to display questions of ten to the user.  Scores can be subbmitted to firebase and at the end of the quiz and the top three player scores are displayed. Try your luck and see if you beat the top scores! Site is responsive and accessible to all users. Created with Linda Shen, Imtiaz Rashid, and Chris Yun</p>
+                        <a href="https://robotrivia.netlify.app/" target="_blank">Live Site</a><span> |</span>
+                        <a href="https://github.com/Robo-Trivia/project4-robo-trivia" target="_blank">Git Repo</a>
+                        <h4>made with</h4>
+                        <ul>
+                            <li>
+                                <span class="iconify" data-icon="ant-design:html5-filled" data-width="30" data-height="30"></span>
+                            </li>
+                            <li>
+                                <span class="iconify" data-icon="akar-icons:sass-fill" data-width="30" data-height="30"></span>
+                            </li>
+                            <li>
+                                <span class="iconify" data-icon="akar-icons:react-fill" data-width="30" data-height="30"></span>
+                            </li>
+                            <li>
+                                <span class="iconify" data-icon="eos-icons:api" data-width="30" data-height="30"></span>
+                            </li>
+                            <li>
+                                <span class="iconify" data-icon="simple-icons:firebase" data-width="30" data-height="30"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <div class="projectContainer">
-                <h3>A Look at Space - Photos from Nasa</h3>
-            <div class="projectContainerLeft wrapper jsScroll slideLeft">
-                <div class="projectDescription">
-                    <p>Have you ever wanted to see what it looks like in outerspace? Enter your favourite galatic word into the searchbar to take a look. This app accesses data from the NASA API and returns a list of images with their description.  Users are able to like/unlike photos. Site is responsive and accessible for all users.</p>
-                    <a href="https://look-into-space.netlify.app/" target="_blank">Live Site</a><span> |</span>
-                    <a href="https://github.com/AshThadickal/ashleyThadickalProjectThree" target="_blank">Git Repo</a>
-                    <h4>made with</h4>
-                    <ul>
-                        <li>
-                            <span class="iconify" data-icon="ant-design:html5-filled" data-width="30" data-height="30"></span>
-                        </li>
-                        <li>
-                            <span class="iconify" data-icon="bx:bxl-css3" data-width="30" data-height="30"></span>
-                        </li>
-                        <li>
-                            <span class="iconify" data-icon="akar-icons:react-fill" data-width="30" data-height="30"></span>
-                        </li>
-                        <li>
-                            <span class="iconify" data-icon="eos-icons:api" data-width="30" data-height="30"></span>
-                        </li>
-                    </ul>
+            <div class="projectContainer">      
+                <div class="projectContainerLeft wrapper jsScroll slideLeft">
                     
+                    <div class="projectDescription">
+                        <h3>A Look at Space - Photos from Nasa</h3>
+                        <p>Have you ever wanted to see what it looks like in outerspace? Enter your favourite galatic word into the searchbar to take a look. This app accesses data from the NASA API and returns a list of images with their description.  Users are able to like/unlike photos. Site is responsive and accessible for all users.</p>
+                        <a href="https://look-into-space.netlify.app/" target="_blank">Live Site</a><span> |</span>
+                        <a href="https://github.com/AshThadickal/ashleyThadickalProjectThree" target="_blank">Git Repo</a>
+                        
+                        <h4>made with</h4>
+                        <ul>
+                            <li>
+                                <span class="iconify" data-icon="ant-design:html5-filled" data-width="30" data-height="30"></span>
+                            </li>
+                            <li>
+                                <span class="iconify" data-icon="bx:bxl-css3" data-width="30" data-height="30"></span>
+                            </li>
+                            <li>
+                                <span class="iconify" data-icon="akar-icons:react-fill" data-width="30" data-height="30"></span>
+                            </li>
+                            <li>
+                                <span class="iconify" data-icon="eos-icons:api" data-width="30" data-height="30"></span>
+                            </li>
+                        </ul>    
+                    </div>
+                    <div class="projectImage">
+                        <img src="./assets/projectThree.png" alt="NASA project homepage.">
+                    </div>
                 </div>
-                <div class="projectImage">
-                    <img src="./assets/projectThree.png" alt="NASA project homepage.">
-                </div>
-            </div>
             </div>
             
-
-            <div class="projectContainer backgroundColour">
-                <h3>Park Weather App</h3>
-            <div class="projectContainerRight wrapper jsScroll slideRight">
-                <div class="projectImage">
-                    <img src="./assets/projectTwo.png" alt="Park weather app homepage.">
+            <div class="projectContainer fullbleedGrey">
+                <div class="projectContainerRight wrapper jsScroll slideRight">  
+                    <div class="projectImage">
+                        <img src="./assets/projectTwo.png" alt="Park weather app homepage.">
+                    </div>
+                    <div class="projectDescription">
+                        <h3>Park Weather App</h3>
+                        <p>Use this app to get real time weather to determine whether it is a great day to head to the park! This app makes a fetch call to the open weather map API based off user input and returns the up-to-date weather along with a dynamic image to match whether it is sunny, cloudy, snowy, or rainy.</p>
+                        <a href="https://vigorous-thompson-3ab435.netlify.app/" target="_blank">Live Site</a><span> |</span>
+                        <a href="https://github.com/Ka-hley/parkWeatherApp" target="_blank">Git Repo</a>
+                        <h4>made with</h4>
+                        <ul>
+                            <li>
+                                <span class="iconify" data-icon="ant-design:html5-filled" data-width="30" data-height="30"></span>
+                            </li>
+                            <li>
+                                <span class="iconify" data-icon="bx:bxl-css3" data-width="30" data-height="30"></span>
+                            </li>
+                            <li>
+                                <span class="iconify" data-icon="eos-icons:api" data-width="30" data-height="30"></span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="projectDescription">
-                    <p>Use this app to get real time weather to determine whether it is a great day to head to the park! This app makes a fetch call to the open weather map API based off user input and returns the up-to-date weather along with a dynamic image to match whether it is sunny, cloudy, snowy, or rainy.</p>
-                    <a href="https://vigorous-thompson-3ab435.netlify.app/" target="_blank">Live Site</a><span> |</span>
-                    <a href="https://github.com/Ka-hley/parkWeatherApp" target="_blank">Git Repo</a>
-                    <h4>made with</h4>
-                    <ul>
-                        <li>
-                            <span class="iconify" data-icon="ant-design:html5-filled" data-width="30" data-height="30"></span>
-                        </li>
-                        <li>
-                            <span class="iconify" data-icon="bx:bxl-css3" data-width="30" data-height="30"></span>
-                        </li>
-                        <li>
-                            <span class="iconify" data-icon="eos-icons:api" data-width="30" data-height="30"></span>
-                        </li>
-                    </ul>
-                    
-                </div>
-
-            </div>
             </div>
 
-            <div class="projectContainer">
-                <h3>Creative - A PSD Conversion</h3>
-            <div class="projectContainerLeft projectOne wrapper jsScroll slideLeft">
-                <div class="projectDescription">
-                    <p>Created a multi-page website based off client design.  Responsive across various screen sizes and accessible for all users.</p>
-                    <a href="https://creative-psd.netlify.app/" target="_blank">Live Site</a><span> |</span>
-                    <a href="https://github.com/AshThadickal/ashleyThadickalProjectOne" target="_blank">Git Repo</a>
-                    <h4>made with</h4>
-                    <ul>
-                        <li>
-                            <span class="iconify" data-icon="ant-design:html5-filled" data-width="30" data-height="30"></span>
-                        </li>
-                        <li>
-                            <span class="iconify" data-icon="akar-icons:sass-fill" data-width="30" data-height="30"></span>
-                        </li>
-                        <li>
-                            <span class="iconify" data-icon="akar-icons:react-fill" data-width="30" data-height="30"></span>
-                        </li>
-                        <li>
-                            <span class="iconify" data-icon="eos-icons:api" data-width="30" data-height="30"></span>
-                        </li>
-                    </ul>
-
+            <div class="projectContainer">   
+                <div class="projectContainerLeft projectOne wrapper jsScroll slideLeft">        
+                    <div class="projectDescription">
+                        <h3>Creative - A PSD Conversion</h3>
+                        <p>Created a multi-page website based off client design.  Responsive across various screen sizes and accessible for all users.</p>
+                        <a href="https://creative-psd.netlify.app/" target="_blank">Live Site</a><span> |</span>
+                        <a href="https://github.com/AshThadickal/ashleyThadickalProjectOne" target="_blank">Git Repo</a>
+                        <h4>made with</h4>
+                        <ul>
+                            <li>
+                                <span class="iconify" data-icon="ant-design:html5-filled" data-width="30" data-height="30"></span>
+                            </li>
+                            <li>
+                                <span class="iconify" data-icon="akar-icons:sass-fill" data-width="30" data-height="30"></span>
+                            </li>
+                            <li>
+                                <span class="iconify" data-icon="akar-icons:react-fill" data-width="30" data-height="30"></span>
+                            </li>
+                            <li>
+                                <span class="iconify" data-icon="eos-icons:api" data-width="30" data-height="30"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="projectImage">
+                        <img src="./assets/shotsnapp-1643919251.348.png" alt="Client PSD conversion homepage.">
+                    </div>
                 </div>
-                <div class="projectImage">
-                    <img src="./assets/shotsnapp-1643919251.348.png" alt="Client PSD conversion homepage.">
-                </div>
-
-            </div>
             </div>
         </section>
 
-        <section class="backgroundColour" id="contact">
+        <section class="fullbleedGrey" id="contact">
             <div class="wrapper contactContainer">
             <div class="contactDetails">
                 <h4>Happy to Connect!</h4>
-                <p>Please send me a message for a virtual coffee chat or to discuss our favourite pups! You can also send me an email at ashleythadickal@gmail.com or schedule a time via my <a href="https://calendly.com/ashleythadickal" target="_blank">Calendly</a> link to connect. Looking forward to chatting!</p>
-                
+                <p>Please drop me a line for a virtual coffee chat to discuss how I can contribute to your team! You can also send me an email at ashleythadickal@gmail.com or schedule a time via my Calendly link below. Looking forward to chatting!</p>
+                <div class="contactIconsContainer">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/in/ashley-thadickal-4a595544/" target="_blank"><span class="iconify" data-icon="akar-icons:linkedin-fill" data-width="30" data-height="30"></span></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/AshThadickal" target="_blank"><span class="iconify" data-icon="akar-icons:github-fill" data-width="30" data-height="30"></span></a>
+                        </li>
+                        <li>
+                            <a href="https://calendly.com/ashleythadickal" target="_blank"><span class="iconify" data-icon="cil:calendar" data-width="30" data-height="30"></span></a>
+                        </li>
+                    </ul>
+
+
+                </div>
             </div>
             <form name="contact" method="POST" data-netlify="true" class="contactForm">
                 <label class="sr-only" for="contactName">Enter your name.</label>
