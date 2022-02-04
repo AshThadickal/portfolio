@@ -4,7 +4,7 @@
     align-items: center;
     padding-top: 40px;
     font-size: 1.2rem;
-    height: 60vh;
+    min-height: 60vh;
         .contactDetails {
             width: 40%;
             margin-right: 20px;
@@ -21,6 +21,9 @@
                 }
                 input {
                     padding: 5px 0;
+                }
+                textarea {
+                    resize: none;
                 }
                 button {
                     // width: 25%;

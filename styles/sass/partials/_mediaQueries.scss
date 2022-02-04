@@ -1,3 +1,22 @@
-@media (prefers-reduced-motion: reduce) {
- //target things with animations and transitions to turn them off here
+// @media (prefers-reduced-motion: reduce) {
+//  //target things with animations and transitions to turn them off here
+// }
+
+@media (min-width: 350px) {
+    .navContainer {
+        display: none;
+    }
+    header {
+        height: 60vh;
+            .h1Container {
+
+                    h1 {
+                        font-size: 1rem;
+                        line-height: 40px;
+                    }
+            }
+            .arrowDown {
+                display: none;
+            }
+    }
 }

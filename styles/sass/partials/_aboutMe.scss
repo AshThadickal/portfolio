@@ -1,7 +1,7 @@
 
 .aboutMeSection {
     background-color: #ebecf0;
-    height: 80vh;
+    min-height: 80vh;
     margin-top: 10vh;
     margin-bottom: 10vh;
     display: flex;
@@ -9,6 +9,7 @@
     justify-content: center;
         h2 {
             padding: 20px 0;
+            text-align: center;
         }
             .aboutMeContainer {
                 padding: 20px 0;
@@ -17,6 +18,9 @@
                 .aboutMeImage {
                     width: 35%;
                     margin-right: 50px;
+                        img {
+                            box-shadow: -10px -10px $accent;
+                        }
                 }
                 .aboutMeParas {
                     width: 65%;

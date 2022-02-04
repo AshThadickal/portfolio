@@ -6,7 +6,7 @@
 @import './partials/nav';
 @import './partials/contactForm';
 @import './partials/footer';
-@import './partials/resume';
+@import './partials/mediaQueries';
 
 
 
@@ -15,7 +15,7 @@ header {
   background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(./../assets/jon-tyson-v_BgAXQ2hjw-unsplash.jpg);
   background-size: cover;
 
-        button {
+        .arrowDown {
             display: block;
             font-size: 2rem;
             position: absolute;

@@ -1,3 +1,4 @@
+@import './functions';
 
 .navContainer {
     height: 10vh;
@@ -21,14 +22,104 @@
                         text-transform: uppercase;
                     }
             }
-}
-
-
-.mobileNavContainer {
-    display: none;
-}
-
-// .mobileMenuIcon,
-// .mobileNav {
     
-// }
+}
+
+.mobileNav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background: $background;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all .3s;
+        ul {
+            display: inline-flex;
+            flex-direction: column;
+            height: 100%;
+            align-items: flex-end;
+            justify-content: center;
+            transform: translateX(-18%) skew(-16deg);
+                li {
+                    display: block;
+                    margin: 0.5rem 0;
+                    text-align: right;
+                    transform: skew(16deg);
+                        :nth-child(1) a {
+                            transition: all 275ms 175ms;
+                        }
+                        :nth-child(2) a {
+                            transition: all 275ms 225ms;
+                        }
+                        :nth-child(3) a {
+                            transition: all 275ms 275ms;
+                        }
+                        :nth-child(4) a {
+                            transform: all 275ms 325ms;
+                        }
+                        a {
+                            opacity: 0;
+                            transform: translateY(-10px);
+                            display: block;
+                        }
+                }
+        }
+}
+
+.mobileNavIsOpen {
+    opacity: 1;
+    z-index: 100;
+    visibility: visible;
+        ul li a {
+            opacity: 1;
+            transform: translateY(0);
+        }
+}
+
+.mobileNav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -15px;
+    background-color: rgba(188,19,254, 0.5);
+    transform-origin: 0 0 ;
+    transform: skew(-14deg) translateX(-120%);
+    translate: all .25s .1s;
+}
+
+.mobileNavIsOpen::before {
+    transform: skew(-14deg) translateX(0);
+}
+
+.mobileMenuButton {
+    color: $accent;
+    position: absolute;
+    top: 15px;
+    padding-top: 20px;
+    right: 15px;
+    z-index: 200;
+    background: none;
+    border: 0;
+    cursor: pointer;
+        ::after,
+        ::before {
+            content: '';
+            display: block;
+            height: 100%;
+            background: #ebecf0;
+            transition: all .275s;
+        }
+        ::after {
+            transform: translateY(-12px) translateX(-2px) skew(-20deg);
+        }
+        ::before {
+            transform: translateY(-16px) skew(-10deg);
+        }
+}
+

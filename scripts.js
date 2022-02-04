@@ -3,11 +3,10 @@ const myPage = {};
 
 myPage.init = () => {
     myPage.handleNavigation();
-    // myPage.fadeOut();
-    // myPage.handleScrollAnimation();
-    // myPage.scrollEventListener();
     myPage.handleScroll();
     myPage.arrowDownClick();
+    myPage.mobileMenuListener();
+    myPage.closeMobileListener();
 }
 
 // // need a handle click of the nav anchors to smooth scroll to the section
@@ -27,7 +26,6 @@ myPage.arrowDownClick = function (e) {
 
 myPage.handleNavScroll = function (e) {
     e.preventDefault();
-    console.log(this.getAttribute('href'))
     const href = this.getAttribute('href');
     const offsetTop = document.querySelector(href).offsetTop;
     
@@ -57,7 +55,7 @@ myPage.debounce = function (func, wait = 10, immediate = true) {
 };
 
 myPage.scrollElements = document.querySelectorAll('.jsScroll');
-
+console.log(myPage.scrollElements)
 myPage.checkSlide = function(e) {
     myPage.scrollElements.forEach(scrollElement => {
         // halfway through the element
@@ -79,7 +77,30 @@ myPage.handleScroll = function() {
 }
 // need a handle click of a hamburger menu on mobile to open a menu and to close (display block/none?)
 
+myPage.mobileMenuListener = function() {
+    const burger = document.querySelector('.mobileMenuButton');
+    const mobileNav = document.querySelector('.mobileNav');
+    
+    burger.addEventListener('click', function(e) {
+        this.classList.toggle('mobileNavIsOpen');
+        mobileNav.classList.toggle('mobileNavIsOpen');
+        
+    });
+}
 
+myPage.closeMobileListener = function() {
+    const anchorTags = document.querySelectorAll('.mobileNav a');
+    const burger = document.querySelector('.mobileMenuButton');
+    const mobileNav = document.querySelector('.mobileNav');
+
+    console.log(anchorTags)
+    anchorTags.forEach(anchor => {
+        anchor.addEventListener('click', function() {
+            burger.classList.toggle('mobileNavIsOpen');
+            mobileNav.classList.toggle('mobileNavIsOpen');
+        })
+    })
+}
 
 myPage.init();
 
