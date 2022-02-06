@@ -274,6 +274,7 @@ h3 {
 
 p {
   line-height: 1.6;
+  font-size: 1.2rem;
 }
 
 a {
@@ -446,6 +447,21 @@ ul li {
           transform: translateY(-16px) skew(-10deg);
 }
 
+.skipLink {
+  position: absolute;
+  top: -40px;
+  left: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+  -webkit-transition: top 0.5s ease-out;
+  transition: top 0.5s ease-out;
+}
+
+.skipLink:focus {
+  top: 10px;
+}
+
 header {
   height: 95vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url(./../assets/jon-tyson-v_BgAXQ2hjw-unsplash.jpg);
@@ -456,7 +472,7 @@ header .arrowDown {
   display: block;
   font-size: 2rem;
   position: absolute;
-  bottom: 25px;
+  bottom: 100px;
   right: 50%;
   background: none;
   border: none;
@@ -467,30 +483,30 @@ header .arrowDown {
 }
 @-webkit-keyframes bounce {
   0% {
-    top: 90%;
+    top: 85%;
   }
   50% {
-    top: 87%;
+    top: 82%;
   }
   70% {
-    top: 88%;
+    top: 83%;
   }
   100% {
-    top: 90%;
+    top: 85%;
   }
 }
 @keyframes bounce {
   0% {
-    top: 90%;
+    top: 85%;
   }
   50% {
-    top: 87%;
+    top: 82%;
   }
   70% {
-    top: 88%;
+    top: 83%;
   }
   100% {
-    top: 90%;
+    top: 85%;
   }
 }
 
@@ -586,6 +602,9 @@ header .arrowDown {
 .aboutMeSection .aboutMeParas a {
   color: #bc13fe;
 }
+.aboutMeSection .aboutMeParas .italics {
+  font-style: italic;
+}
 
 .techStack {
   padding-bottom: 10vh;
@@ -662,17 +681,16 @@ header .arrowDown {
   padding-top: 40px;
 }
 
+.fullbleedGrey {
+  background-color: #ebecf0;
+}
+
 .projectContainer {
   padding: 20px 0 30px 0;
   min-height: 60vh;
 }
-
-.projectImage,
-.projectDescription {
-  width: 50%;
-}
-
-.projectContainerRight {
+.projectContainer .projectContainerRight,
+.projectContainer .projectContainerLeft {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -680,105 +698,68 @@ header .arrowDown {
       -ms-flex-align: center;
           align-items: center;
   min-height: 60vh;
-  width: 100%;
 }
-.projectContainerRight .projectImage {
+.projectContainer .projectContainerRight .projectImage,
+.projectContainer .projectContainerLeft .projectImage {
+  width: 50%;
   -ms-flex-item-align: center;
       align-self: center;
 }
-.projectContainerRight .projectImage img {
+.projectContainer .projectContainerRight .projectImage img,
+.projectContainer .projectContainerLeft .projectImage img {
   max-height: 450px;
 }
-.projectContainerRight .projectDescription h3 {
+.projectContainer .projectContainerRight .projectDescription,
+.projectContainer .projectContainerLeft .projectDescription {
+  width: 50%;
+}
+.projectContainer .projectContainerRight .projectDescription h3,
+.projectContainer .projectContainerLeft .projectDescription h3 {
   text-align: left;
 }
-.projectContainerRight .projectDescription p {
-  font-size: 1.2rem;
-}
-.projectContainerRight .projectDescription h4 {
+.projectContainer .projectContainerRight .projectDescription h4,
+.projectContainer .projectContainerLeft .projectDescription h4 {
   text-align: right;
 }
-.projectContainerRight .projectDescription ul {
+.projectContainer .projectContainerRight .projectDescription ul,
+.projectContainer .projectContainerLeft .projectDescription ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
 }
-.projectContainerRight .projectDescription ul li {
+.projectContainer .projectContainerRight .projectDescription ul li,
+.projectContainer .projectContainerLeft .projectDescription ul li {
   margin-left: 10px;
   -webkit-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
 }
-.projectContainerRight .projectDescription ul li:hover, .projectContainerRight .projectDescription ul li:focus {
+.projectContainer .projectContainerRight .projectDescription ul lihover, .projectContainer .projectContainerRight .projectDescription ul lifocus,
+.projectContainer .projectContainerLeft .projectDescription ul lihover,
+.projectContainer .projectContainerLeft .projectDescription ul lifocus {
   color: #bc13fe;
 }
-.projectContainerRight .projectDescription ul a {
+.projectContainer .projectContainerRight .projectDescription ul li a,
+.projectContainer .projectContainerLeft .projectDescription ul li a {
   margin: 0 10px;
 }
 
-.projectContainerLeft {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 60vh;
-  width: 100%;
-}
 .projectContainerLeft .projectImage {
+  width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  width: 35%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.projectContainerLeft .projectImage img {
-  max-height: 450px;
-}
-.projectContainerLeft .projectDescription {
+.projectContainerLeft .projectImage .projectDescription {
   width: 65%;
-}
-.projectContainerLeft .projectDescription h3 {
-  text-align: center;
-}
-.projectContainerLeft .projectDescription p {
-  font-size: 1.2rem;
-}
-.projectContainerLeft .projectDescription h4 {
-  text-align: right;
-}
-.projectContainerLeft .projectDescription ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-}
-.projectContainerLeft .projectDescription ul li {
-  margin-left: 10px;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out;
-  transition: -webkit-transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out;
-  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
-}
-.projectContainerLeft .projectDescription ul li:hover, .projectContainerLeft .projectDescription ul li:focus {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-.projectContainerLeft .projectDescription ul a {
-  margin: 0 10px;
-}
-
-.fullbleedGrey {
-  background-color: #ebecf0;
 }
 
 .jsScroll {
@@ -865,14 +846,22 @@ header .arrowDown {
 .contactContainer .contactDetails h4 {
   margin-top: 0;
 }
-.contactContainer .contactIconsContainer a {
+.contactContainer .contactIconsContainer ul {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.contactContainer .contactIconsContainer ul li {
+  margin-right: 15px;
+}
+.contactContainer .contactIconsContainer ul li a {
   -webkit-transition: color 0.25s ease-out;
   transition: color 0.25s ease-out;
 }
-.contactContainer .contactIconsContainer a:hover, .contactContainer .contactIconsContainer a:focus {
+.contactContainer .contactIconsContainer ul li a:hover, .contactContainer .contactIconsContainer ul li a:focus {
   color: #bc13fe;
 }
-.contactContainer .contactIconsContainer a::after {
+.contactContainer .contactIconsContainer ul li a::after {
   width: 0;
   height: 0;
 }
@@ -890,13 +879,15 @@ header .arrowDown {
 .contactContainer form textarea,
 .contactContainer form button {
   border: 1px solid #bc13fe;
+  border-radius: 5px;
   margin: 5px 0;
 }
 .contactContainer form input {
-  padding: 5px 0;
+  padding: 5px 8px;
 }
 .contactContainer form textarea {
   resize: none;
+  padding: 5px 8px;
 }
 .contactContainer form button {
   padding: 10px;

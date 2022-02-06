@@ -12,16 +12,22 @@
                 }
         }
         .contactIconsContainer {
-            a {
-                transition: color 0.25s ease-out;
-                    &:hover,
-                    &:focus {
-                        color: $accent;
+            ul {
+                justify-content: flex-start;
+                    li {
+                        margin-right: 15px;
+                        a {
+                            transition: color 0.25s ease-out;
+                                &:hover,
+                                &:focus {
+                                    color: $accent;
+                                }
+                            &::after {
+                                width: 0;
+                                height: 0;
+                            }
+                        }
                     }
-                &::after {
-                    width: 0;
-                    height: 0;
-                }
             }
         }
         form {
@@ -32,13 +38,15 @@
                 textarea,
                 button {
                     border: 1px solid $accent;
+                    border-radius: 5px;
                     margin: 5px 0;
                 }
                 input {
-                    padding: 5px 0;
+                    padding: 5px 8px;
                 }
                 textarea {
                     resize: none;
+                    padding: 5px 8px;
                 }
                 button {
                     padding: 10px;

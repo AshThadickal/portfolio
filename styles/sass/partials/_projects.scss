@@ -5,99 +5,64 @@
     padding-top: 40px;
 }
 
+.fullbleedGrey {
+    background-color: $background;
+}
+
+
+
 .projectContainer {
     padding: 20px 0 30px 0;
     min-height: 60vh;
-}
-.projectImage,
-.projectDescription {
-    width: 50%;
-}
-.projectContainerRight {
-    display: flex;
-    align-items: center;
-    min-height: 60vh;
-    width: 100%;
-        .projectImage {
-            align-self: center;
-                img {
-                    max-height: 450px;
+        .projectContainerRight,
+        .projectContainerLeft {
+            display: flex;
+            align-items: center;
+            min-height: 60vh;
+                .projectImage {
+                    width: 50%;
+                    align-self: center;
+                        img {
+                            max-height: 450px;
+                        }
                 }
-        }
-        .projectDescription {
-                h3 {
-                    text-align: left;
-                }
-                p {
-                    font-size: 1.2rem;
-                }
-                h4 {
-                    text-align: right;
-                }
-                ul {
-                    display: flex;
-                    justify-content: end;
-                        li {
-                            margin-left: 10px;
-                            transition: color 0.2s ease-in-out;
-                                &:hover,
-                                &:focus {
-                                    color: $accent;
+                .projectDescription {
+                    width: 50%;
+                        h3 {
+                            text-align: left;
+                        }
+                        h4 {
+                            text-align: right;
+                        }
+                        ul {
+                            display: flex;
+                            justify-content: flex-end;
+                                li {
+                                    margin-left: 10px;
+                                    transition: color 0.2s ease-in-out;
+                                        &hover,
+                                        &focus {
+                                            color: $accent;
+                                        }
+                                        a {
+                                            margin: 0 10px;
+                                        }
                                 }
                         }
-                        a {
-                            margin: 0 10px
-                        }
                 }
         }
-}
 
+}
 .projectContainerLeft {
-    display: flex;
-    align-items: center;
-    min-height: 60vh;
-    width: 100%;
         .projectImage {
+            width: 35%;
             display: flex;
             justify-content: center;
-            align-self: center;
-            width: 35%;
-                img {
-                    max-height: 450px;
-                }
-        }
+            align-items: center;
         .projectDescription {
             width: 65%;
-                h3 {
-                    text-align: center;
-                }
-                p {
-                    font-size: 1.2rem;
-                }
-                h4 {
-                    text-align: right;
-                }
-                ul {
-                    display: flex;
-                    justify-content: end;
-                    
-                        li {
-                            margin-left: 10px;
-                            transition: transform 0.2s ease-in-out;
-                                &:hover,
-                                &:focus {
-                                    transform: scale(1.2);
-                                }
-                        }
-                        a {
-                            margin: 0 10px
-                        }
-                }
         }
 }
-
-.fullbleedGrey {
-    background-color: $background;
 }
 
 .jsScroll {

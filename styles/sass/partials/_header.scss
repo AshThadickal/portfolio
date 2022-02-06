@@ -9,7 +9,7 @@ header {
     display: block;
     font-size: 2rem;
     position: absolute;
-    bottom: 25px;
+    bottom: 100px;
     right: 50%;
     background: none;
     border: none;
@@ -20,16 +20,16 @@ header {
 
     @keyframes bounce {
         0% {
-            top: 90%;
+            top: 85%;
         }
         50% {
-            top: 87%;
+            top: 82%;
         }
         70% {
-            top: 88%;
+            top: 83%;
         }
         100% {
-            top: 90%;
+            top: 85%;
         }
     }
 }

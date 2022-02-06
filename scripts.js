@@ -55,20 +55,17 @@ myPage.debounce = function (func, wait = 10, immediate = true) {
 };
 
 myPage.scrollElements = document.querySelectorAll('.jsScroll');
-console.log(myPage.scrollElements)
 myPage.checkSlide = function(e) {
     myPage.scrollElements.forEach(scrollElement => {
         // halfway through the element
         const slideInAt = (window.scrollY + window.innerHeight) - scrollElement.clientHeight / 2;
         // bottom of element
-        const elementBottom = scrollElement.offsetTop + scrollElement.clientHeight;
+        // const elementBottom = scrollElement.offsetTop + scrollElement.clientHeight;
         const isHalfShown = slideInAt > scrollElement.offsetTop;
-        const isNotScrolledPast = window.scrollY < elementBottom
-        if(isHalfShown && isNotScrolledPast) {
+        // const isNotScrolledPast = window.scrollY < elementBottom
+        if(isHalfShown) {
             scrollElement.classList.add('scrolled');
-        } else {
-            scrollElement.classList.remove('scrolled');
-        }
+        } 
     })
 }
 
