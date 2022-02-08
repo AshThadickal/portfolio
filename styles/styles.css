@@ -652,8 +652,8 @@ header .arrowDown {
           justify-content: center;
 }
 .mobileTechStack li {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   border: 2px solid #bc13fe;
   border-radius: 5px;
   display: -webkit-box;
@@ -1022,8 +1022,11 @@ footer {
     display: none;
   }
 
-  h2,
-h3 {
+  .projectContainer h3 {
+    font-size: 1rem;
+  }
+
+  h2 {
     font-size: 1rem;
   }
 
@@ -1044,6 +1047,7 @@ h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    font-size: 1rem;
   }
   .contactContainer .contactDetails {
     width: 100%;
@@ -1051,6 +1055,9 @@ h3 {
   }
   .contactContainer .contactForm {
     width: 100%;
+  }
+  .contactContainer .contactForm input {
+    font-size: 1rem;
   }
 }
 @media (max-width: 350px) {
