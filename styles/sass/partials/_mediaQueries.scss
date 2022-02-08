@@ -83,6 +83,13 @@
          }
      }
 
+     .successMessage {
+         text-align: center;
+         span {
+             display: block;
+         }
+     }
+
  }
 
 @media (max-width: 480px) {
