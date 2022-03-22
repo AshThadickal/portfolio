@@ -16,8 +16,6 @@
                     align-items: center;
                     width: 150px;
                     height: 150px;
-                    border: 2px solid $accent;
-                    border-radius: 25px;
                     margin: 10px 20px;
                     padding: 20px;
                         p {
@@ -34,8 +32,6 @@
     li {
         width: 110px;
         height: 110px;
-        border: 2px solid $accent;
-        border-radius: 5px;
         display: flex;
         flex-direction: column;
         justify-content: center;

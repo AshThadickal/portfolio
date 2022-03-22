@@ -636,8 +636,6 @@ header .arrowDown {
           align-items: center;
   width: 150px;
   height: 150px;
-  border: 2px solid #bc13fe;
-  border-radius: 25px;
   margin: 10px 20px;
   padding: 20px;
 }
@@ -654,8 +652,6 @@ header .arrowDown {
 .mobileTechStack li {
   width: 110px;
   height: 110px;
-  border: 2px solid #bc13fe;
-  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -716,6 +712,10 @@ header .arrowDown {
 .projectContainer .projectContainerRight .projectDescription h3,
 .projectContainer .projectContainerLeft .projectDescription h3 {
   text-align: left;
+}
+.projectContainer .projectContainerRight .projectDescription a,
+.projectContainer .projectContainerLeft .projectDescription a {
+  color: #bc13fe;
 }
 .projectContainer .projectContainerRight .projectDescription h4,
 .projectContainer .projectContainerLeft .projectDescription h4 {

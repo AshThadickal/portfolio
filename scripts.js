@@ -14,7 +14,6 @@ myPage.init = () => {
 myPage.handleNavigation = () => {
     const navLinks = document.querySelectorAll('.hrefLink a')
     for (const navLink of navLinks) {
-        console.log(navLink)
         navLink.addEventListener('click', myPage.handleNavScroll);
     }
 }
@@ -90,7 +89,6 @@ myPage.closeMobileListener = function() {
     const burger = document.querySelector('.mobileMenuButton');
     const mobileNav = document.querySelector('.mobileNav');
 
-    console.log(anchorTags)
     anchorTags.forEach(anchor => {
         anchor.addEventListener('click', function() {
             burger.classList.toggle('mobileNavIsOpen');
