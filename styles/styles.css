@@ -704,6 +704,7 @@ header .arrowDown {
 .projectContainer .projectContainerRight .projectImage img,
 .projectContainer .projectContainerLeft .projectImage img {
   max-height: 450px;
+  margin: 0 auto;
 }
 .projectContainer .projectContainerRight .projectDescription,
 .projectContainer .projectContainerLeft .projectDescription {
@@ -894,6 +895,7 @@ header .arrowDown {
   -ms-flex-item-align: start;
       align-self: flex-start;
   cursor: pointer;
+  background-color: white;
 }
 
 footer {
